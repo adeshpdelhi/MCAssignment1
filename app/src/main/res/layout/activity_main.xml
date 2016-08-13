@@ -10,7 +10,35 @@
     tools:context="com.creation.adesh.mcassignment1.MainActivity">
 
     <TextView
+        android:id="@+id/questionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:text="Hello World!" />
+
+    <LinearLayout
+        android:id="@+id/trueFalseLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionText"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="answerTrue"
+            android:text="@string/trueText"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="answerFalse"
+            android:text="@string/falseText"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trueFalseLayout"
+        android:text="@string/nextText"
+        android:onClick="next"
+        android:layout_centerInParent="true"/>
 </RelativeLayout>

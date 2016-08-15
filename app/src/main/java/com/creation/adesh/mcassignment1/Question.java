@@ -14,7 +14,7 @@ public class Question {
                 answer=false;
     }
     public Question(){
-        number = new Random().nextInt(10);
+        number = new Random().nextInt(1000)+1;
         setAnswer();
     }
 

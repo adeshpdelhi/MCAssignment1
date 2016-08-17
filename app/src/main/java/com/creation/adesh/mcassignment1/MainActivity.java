@@ -10,14 +10,14 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static TextView mquestionText = null;
+    private static TextView mQuestionText = null;
     private Integer number = null;
     private Question presentQuestion = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mquestionText = (TextView) findViewById(R.id.questionText);
+        mQuestionText = (TextView) findViewById(R.id.questionText);
         if(savedInstanceState == null) {
             presentQuestion= new Question();
             number = presentQuestion.getNumber();
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             presentQuestion = new Question(number);
         }
 
-        mquestionText.setText(number+" is a prime number.");
+        mQuestionText.setText(number+" is a prime number.");
     }
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState){
@@ -50,6 +50,6 @@ public class MainActivity extends AppCompatActivity {
     public void next(View view){
         presentQuestion= new Question();
         number = presentQuestion.getNumber();
-        mquestionText.setText(number+" is a prime number.");
+        mQuestionText.setText(number+" is a prime number.");
     }
 }
